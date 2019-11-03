@@ -1,16 +1,18 @@
-# commercetools-adyen-integration
+# [DEPRECATED] commercetools-adyen-integration
 [![Build Status](https://travis-ci.org/commercetools/commercetools-adyen-integration.svg?branch=master)](https://travis-ci.org/commercetools/commercetools-adyen-integration)
+
+## ⚠️ DEPRECATED: THIS PROJECT IS NO LONGER MAINTAINED
 
 
 This repository provides integration between commercetools and Adyen payment service provider.
 
 #### Supported payment methods
-- Credit card with 3DS payment  
+- Credit card with 3DS payment
 - Paypal payment
 
 This repository contains two standalone modules that interact with CTP and Adyen.
 Complete integration requires running both of the modules.
-
+shortcut
 ## Overview
 ![Overview diagram](https://user-images.githubusercontent.com/9251453/56047499-ce7dfa80-5d45-11e9-9443-aaef9da31eab.png)
 - Shop communicates only with commercetools platform.
@@ -18,7 +20,7 @@ Complete integration requires running both of the modules.
 - Extension module communicates with Adyen payment provider.
 - After Adyen returns a payment result, commercetools payment will be updated and the shop verifies and presents the result.
 - When Adyen cannot fulfill the payment requirement right away, it will later send a notification as a response.
-- The Notification module will process the notification and update the matching commercetools payment accordingly.    
+- The Notification module will process the notification and update the matching commercetools payment accordingly.
 
 ## Extension module
 Extension module is a public service. When a commercetools payment object changes, the [API Extensions](https://docs.commercetools.com/http-api-projects-api-extensions) send a request to the extension module.
